@@ -28,7 +28,7 @@ const pool = new Pool({
 });
 
 // JWT Secret
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+const JWT_SECRET = process.env.JWT_SECRET || 'silulo-secret-key-change-me-in-production-2024';
 
 // Auth Middleware
 const authenticateToken = (req, res, next) => {
