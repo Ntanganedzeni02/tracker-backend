@@ -18,7 +18,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// PostgreSQL Connection Pool
+//PostgreSQL Connection Pool
 const pool = new Pool({
   user: process.env.DB_USER || 'postgres',
   host: process.env.DB_HOST || 'localhost',
