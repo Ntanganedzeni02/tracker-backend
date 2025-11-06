@@ -25,7 +25,13 @@ const pool = new Pool({
   database: process.env.DB_NAME || 'silulo_db',
   password: process.env.DB_PASSWORD || 'postgres',
   port: process.env.DB_PORT || 5432,
+  connectionString: process.env.DATABASE_URL, 
+  ssl: {
+    rejectUnauthorized: false, 
+  },
 });
+
+module.exports = pool;
 
 // JWT Secret
 const JWT_SECRET = process.env.JWT_SECRET || 'silulo-secret-key-change-me-in-production-2024';
